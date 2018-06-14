@@ -11,17 +11,19 @@ app.use( bodyParser.json() );
 db.getDbConnect();
 
 app.get('/form', (req, res) => {
+    res.set('Content-Type', 'text/html');
+    res.send(new Buffer('<h2>Test String</h2>'));
     // res.setHeader('Content-Type', 'text/event-stream');
-    res.set('Content-Type', 'text/plain');
-    res.status(200).send('<form method="post" action="/form">' +
-        '<input type="text" name="title">' +
-        '<input type="text" name="text">' +
-        '<input type="text" name="color">' +
-        '<input type="submit" value="Отправить">' +
-        '</form>')
+    // res.set('Content-Type', 'text/plain');
+    // res.status(200).send('<form method="post" action="/form">' +
+    //     '<input type="text" name="title">' +
+    //     '<input type="text" name="text">' +
+    //     '<input type="text" name="color">' +
+    //     '<input type="submit" value="Отправить">' +
+    //     '</form>')
 });
 app.get('/', (req, res) => {
-    res.status(200);
+    // res.status(200);
     db.getNotes().then(notes => {
         res.json(notes);
     })
