@@ -11,7 +11,6 @@ app.use( bodyParser.json() );
 db.getDbConnect();
 
 app.get('/form', (req, res) => {
-    res.writeHead(200, {'Content-Type': 'text/html'});
     res.send('<form method="post" action="/form">' +
         '<input type="text" name="title">' +
         '<input type="text" name="text">' +
