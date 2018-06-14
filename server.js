@@ -12,7 +12,7 @@ db.getDbConnect();
 
 app.get('/form', (req, res) => {
     res.set('Content-Type', 'text/html');
-    res.send(new Buffer('<h2>Test String</h2>'));
+    res.send(new Buffer('<h2>Test String String </h2>'));
     // res.setHeader('Content-Type', 'text/event-stream');
     // res.set('Content-Type', 'text/plain');
     // res.status(200).send('<form method="post" action="/form">' +
