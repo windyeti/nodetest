@@ -6,7 +6,7 @@ const app = express();
 app.use( bodyParser.json() );
 
 app.get('/', (req, res) => {
-    res.send('<h4>It is response when you request GET!!!</h4>');
+    res.send('<h4>I change header here</h4>');
 });
 app.post('/post', (req, res) => {
     res.json(req.body)
