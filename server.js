@@ -11,7 +11,9 @@ app.use( bodyParser.json() );
 db.getDbConnect();
 
 app.get('/form', (req, res) => {
-    res.send('<form method="post" action="/form">' +
+    // res.setHeader('Content-Type', 'text/event-stream');
+    res.set('Content-Type', 'text/plain');
+    res.status(200).send('<form method="post" action="/form">' +
         '<input type="text" name="title">' +
         '<input type="text" name="text">' +
         '<input type="text" name="color">' +
