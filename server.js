@@ -14,6 +14,6 @@ app.post('/post', (req, res) => {
 
 app.listen(8080, (err) => {
     if(!err) {
-        console.log(`You are listen port 8080`)
+        console.log(`We are listen port 8080`)
     }
 });
