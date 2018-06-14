@@ -6,4 +6,12 @@ const NoteSchema = mongoose.Schema({
     color : String
 });
 
-export const Note = mongoose.model('Note', NoteSchema);
+// const Schema = mongoose.Schema;
+//
+// const NoteSchema = new Schema({
+//     title : String,
+//     text : String,
+//     color : String
+// });
+
+module.exports = mongoose.model('Note', NoteSchema);
