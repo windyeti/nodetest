@@ -11,6 +11,7 @@ app.use( bodyParser.json() );
 db.getDbConnect();
 
 app.get('/form', (req, res) => {
+    // res.status(200);
     res.send('<form method="post" action="/form">' +
         '<input type="text" name="title">' +
         '<input type="text" name="text">' +
